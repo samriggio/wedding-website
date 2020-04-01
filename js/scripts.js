@@ -215,7 +215,9 @@ $(document).ready(function () {
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
         var checkName = $('#invite_code').val();
         
-        if (checkName.toLowerCase() !== 'riggio' || 'mattison' || 'pospisil') {
+        if (checkName.toLowerCase() !== 'riggio' 
+            || checkName.toLowerCase() !== 'mattison' 
+            || checkName.toLowerCase() !== 'pospisil') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Check that last name and try again.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbxjqtHWCkecDWRVcEYHLYjhwFh476FG86JSSqwp0Q3z46_tvm0/exec', data)
